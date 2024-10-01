@@ -10,12 +10,21 @@
            
         }
         table{
-            width: 400px;
+            width: 600px;
             border-collapse: collapse;
         }
         td ,th{
             border: 1px solid black;
             padding: 10px;
+        }
+        tbody >tr:nth-child(2n){
+            background-color: lightgray;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
         thead, tfoot{
             background-color: gray;
@@ -28,6 +37,7 @@
     <h1>Uso de Tabelas grandes</h1>
     <!--ANATOMIA PARA TABELAS GRANDES
     table
+        CAPTION
         THEAD
             TR,TD,TH
         TBODY
@@ -39,10 +49,16 @@
     <table>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th> 
+                <td class="num"><strong>210.147.125</strong></td>         
+             </tr>
+        </tfoot>
         <tbody>
             <tr>
                 <td>São Paulo</td>
@@ -72,7 +88,7 @@
                 <td>0000</td>
             </tr>
         </tfoot>
-
+    <caption>População das Unidades Federativas</caption>
     </table>
 </body>
 </html>
